@@ -1,0 +1,53 @@
+[
+    {
+      "id": "1",
+      "name": "Deadlift",
+      "duration": "45",
+      "description": "To get better at anything, you need to practice it often. But because the deadlift works the body so hard, it isn’t usually done more than once per week. This program, however, cycles the intensity, allowing you to train the deadlift in different rep ranges three days a week without wearing out your lower back or compromising your recovery. As your technique improves, so will your gains—and in four weeks, you won’t look like “most people” anymore. You’ll look like a deadlifter. ",
+      "age": "20-25",
+      "img": "https://www.muscleandfitness.com/wp-content/uploads/2019/05/Bodybuilder-Deadlifting-Heavy-Weight.jpg?w=1000&quality=86&strip=all"
+    },
+
+    {
+      "id": "2",
+      "name": "T-Bar Row",
+      "duration": "45",
+      "description": " Chinups and lat pulldowns will make your lats wider, but if you want a thick, densely muscled back, you need to do rows. The T-bar row allows you to use a neutral grip—palms facing each other—which is the biomechanically strongest position to pull from. ",
+      "age": "20-25",
+      "img": "https://www.muscleandfitness.com/wp-content/uploads/2018/11/Musclar-Fitness-Model-Performing-A-T-Bar-Row-In-The-Gym.jpg?w=1000&quality=86&strip=all"
+    },
+
+    {
+        "id": "3",
+        "name": "Lat Pulldown",
+        "duration": "45",
+        "description": "This variation on the traditional pulldown not only strengthens your middle and upper back, it also works your shoulders, biceps, and forearms. ",
+        "age": "20-25",
+        "img": "https://www.muscleandfitness.com/wp-content/uploads/2018/11/Physically-Fit-Young-Man-Doing-A-Back-Workout-With-A-30-Degree-Lat-Pulldown-Exercise.jpg?w=1000&quality=86&strip=all"
+      },
+    {
+        "id": "4",
+        "name": "Pullups",
+        "duration": "45",
+        "description": " Despite a plethora of more advanced equipment, the simple pullup bar remains one of the most effective tools at your disposal for building size and strength. You just have to commit (or recommit) to developing proficiency with the pullup bar, and this brutal gauntlet will help you do exactly that. By using a weighted belt, you can add resistance that no cable station can replicate, triggering a cascade of hormonal responses and muscle breakdown that will help you to drastically accelerate your gains. Get ready to get wide. ",
+        "age": "20-25",
+        "img": "https://www.muscleandfitness.com/wp-content/uploads/2020/01/Shirtless-Man-Performing-Pullups-In-City-Park.jpg?w=1000&quality=86&strip=all"
+      },
+    {
+        "id": "5",
+        "name": "Dumbbell Curl",
+        "duration": "45",
+        "description": "Ask seven people what the seven best arm exercises of all-time are and answers are likely to vary drastically. Movements that spark muscle growth for one person may not yield the same results for another. (That’s another reason we’re constantly on you to change your exercise selection, sets, reps and rest periods on a consistent basis. ",
+        "age": "20-25",
+        "img": "https://cdn.mos.cms.futurecdn.net/PUh4gpdENASaQybBDXAgPj-1200-80.jpg"
+      },
+    {
+        "id": "6",
+        "name": "Rear Delt Raises",
+        "duration": "45",
+        "description": "This move is similar to regular lateral raises, except here you raise the weights while slightly bent over, leading to more rear deltoid and trap development. Popular modifications to the bent-over rear delt raise include a seated version on a bench or replacing dumbbells with cables. There’s a reason why this exercise landed on our list of five easy moves for bigger shoulders.",
+        "age": "20-25",
+        "img": "https://www.bodybuilding.com/images/2018/august/7-rear-delt-raise-variations-for-maximum-growth-header-830x467.jpg"
+      }
+  ]
+  
