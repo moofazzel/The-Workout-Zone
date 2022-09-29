@@ -9,7 +9,7 @@ import avatar from "../../images/avatar.jpg";
 const InfoSection = () => {
   // console.log(durations);
 
-  const [breakTime, setBreakTime] = useState("");
+  const [brkTime, setBrkTime] = useState(0);
 
   const durations = localStorage.getItem("durations");
 
@@ -19,8 +19,14 @@ const InfoSection = () => {
   };
 
   const handlerBreak = (e) => {
-    setBreakTime(e.target.innerText);
+    const breakTime = e.target.innerText;
+    localStorage.setItem("storedBreakTime", breakTime);
+    const storedBrkTime = localStorage.getItem("storedBreakTime");
+    setBrkTime(storedBrkTime);
+    // console.log(e.target.innerText);
   };
+
+  // console.log(storedBrkTime);
 
   const notify = () => toast("Well done, You finished today's workout ");
 
@@ -69,36 +75,31 @@ const InfoSection = () => {
           onClick={(e) => handlerBreak(e)}
           className="text-md font-medium p-3 bg-white rounded-full transition hover:bg-blue-600 hover:text-white"
         >
-          <span>20</span>
-          <span>s</span>
+          20s
         </button>
         <button
           onClick={(e) => handlerBreak(e)}
           className="text-md font-medium p-3 bg-white rounded-full transition hover:bg-blue-600 hover:text-white"
         >
-          <span>30</span>
-          <span>s</span>
+          30s
         </button>
         <button
           onClick={(e) => handlerBreak(e)}
           className="text-md font-medium p-3 bg-white rounded-full transition hover:bg-blue-600 hover:text-white"
         >
-          <span>35</span>
-          <span>s</span>
+          35s
         </button>
         <button
           onClick={(e) => handlerBreak(e)}
           className="text-md font-medium p-3 bg-white rounded-full transition hover:bg-blue-600 hover:text-white"
         >
-          <span>45</span>
-          <span>s</span>
+          45s
         </button>
         <button
           onClick={(e) => handlerBreak(e)}
           className="text-md font-medium p-3 bg-white rounded-full transition hover:bg-blue-600 hover:text-white"
         >
-          <span>60</span>
-          <span>s</span>
+          60s
         </button>
       </div>
 
@@ -120,7 +121,7 @@ const InfoSection = () => {
       <div className="flex justify-between bg-blue-50 px-6 py-4 rounded-lg my-6 mb-10">
         <h3 className="text-lg font-semibold text-gray-700">Break time</h3>
         <span className="text-blue-700 font-medium text-md mr-5">
-          {breakTime} Second
+          {brkTime}
         </span>
       </div>
 
