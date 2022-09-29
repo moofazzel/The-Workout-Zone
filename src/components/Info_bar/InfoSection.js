@@ -23,10 +23,11 @@ const InfoSection = () => {
     setBreakTime(e.target.innerText)
   };
 
-  const notify = () => toast("Wow so easy!");
+  const notify = () => toast("Well done, You finished today's workout ");
 
   return (
     <div className="text-center pt-10 px-8 fixed">
+      
       <div className="text-left flex gap-4">
         <img className="rounded-full w-16" src={avatar} alt="" />
 
@@ -119,6 +120,17 @@ const InfoSection = () => {
       <button onClick={notify} className=" text-lg bg-blue-700 w-full py-3 rounded-lg text-white font-semibold">
         Activity Completed
       </button>
+      <ToastContainer
+position="top-center"
+autoClose={1500}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+/>
     </div>
   );
 };
