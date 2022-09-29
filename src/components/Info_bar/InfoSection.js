@@ -1,12 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import icon from "../../images/location.png";
+import avatar from "../../images/avatar.jpg";
+
+
+// toast.configure()
 
 const InfoSection = () => {
+  // console.log(durations);
+
+  const [breakTime, setBreakTime] = useState('')
+
+  const durations = localStorage.getItem("durations");
+
+  const reset = () => {
+    localStorage.removeItem("durations");
+    window.location.reload(false);
+  };
+  
+  const handlerBreak = (e) => {
+    setBreakTime(e.target.innerText)
+  };
+
+  const notify = () => toast("Wow so easy!");
+
   return (
     <div className="text-center pt-10 px-8 fixed">
-      <div>
-        <img src="" alt="" />
-        <h3>Mofazzel Hossen</h3>
-        <p>Khulna, Bangladesh</p>
+      <div className="text-left flex gap-4">
+        <img className="rounded-full w-16" src={avatar} alt="" />
+
+        <div>
+          <h3 className="text-2xl text-slate-800 font-bold ">
+            Mofazzel Hossen
+          </h3>
+          <div className="flex gap-2">
+            <img className="icon" src={icon} alt="" />
+            <p className="text-sm text-slate-500">Khulna, Bangladesh</p>
+          </div>
+        </div>
       </div>
       <div className="flex justify-between bg-blue-50 px-6 py-4 rounded-lg my-6">
         <div>
@@ -34,36 +66,59 @@ const InfoSection = () => {
       <h3 className="text-left text-2xl font-semibold ml-1">Add A Break</h3>
 
       <div className="flex justify-between bg-blue-50 px-6 py-4 rounded-lg my-6 mb-10 gap-2">
-        <span className="text-md font-medium p-3 bg-white rounded-full transition hover:bg-blue-600 hover:text-white">
-          20s
-        </span>
-        <span className="text-md font-medium p-3 bg-white rounded-full transition hover:bg-blue-600 hover:text-white">
-          30s
-        </span>
-        <span className="text-md font-medium p-3 bg-white rounded-full transition hover:bg-blue-600 hover:text-white">
-          35s
-        </span>
-        <span className="text-md font-medium p-3 bg-white rounded-full transition hover:bg-blue-600 hover:text-white">
-          45s
-        </span>
-        <span className="text-md font-medium p-3 bg-white rounded-full transition hover:bg-blue-600 hover:text-white">
-          60s
-        </span>
+        <button
+          onClick={(e) => handlerBreak(e)}
+          className="text-md font-medium p-3 bg-white rounded-full transition hover:bg-blue-600 hover:text-white"
+        >
+          <span>20</span><span>s</span>
+        </button>
+        <button
+          onClick={(e) => handlerBreak(e)}
+          className="text-md font-medium p-3 bg-white rounded-full transition hover:bg-blue-600 hover:text-white"
+        >
+          <span>30</span><span>s</span>
+        </button>
+        <button
+          onClick={(e) => handlerBreak(e)}
+          className="text-md font-medium p-3 bg-white rounded-full transition hover:bg-blue-600 hover:text-white"
+        >
+          <span>35</span><span>s</span>
+        </button>
+        <button
+          onClick={(e) => handlerBreak(e)}
+          className="text-md font-medium p-3 bg-white rounded-full transition hover:bg-blue-600 hover:text-white"
+        >
+          <span>45</span><span>s</span>
+        </button>
+        <button
+          onClick={(e) => handlerBreak(e)}
+          className="text-md font-medium p-3 bg-white rounded-full transition hover:bg-blue-600 hover:text-white"
+        >
+          <span>60</span><span>s</span>
+        </button>
       </div>
 
       <h3 className="text-left text-2xl font-semibold ml-1">Exercise time</h3>
 
-      <div className="flex justify-between bg-blue-50 px-6 py-4 rounded-lg my-6 mb-2">
+      <div className="flex justify-between items-center bg-blue-50 px-6 py-4 rounded-lg my-6 mb-2">
         <h3 className="text-lg font-semibold text-gray-700">Exercise time</h3>
-        <span className="text-slate-400 text-sm">0 Second</span>
+        <span className="text-blue-700 font-medium text-md">{durations} Second</span>
+        <button
+          onClick={reset}
+          className="text-red-600 text-lg font-bold border-2 border-red-400 rounded-md px-2 pb-1 hover:bg-red-400 hover:text-white"
+        >
+          x
+        </button>
       </div>
 
       <div className="flex justify-between bg-blue-50 px-6 py-4 rounded-lg my-6 mb-10">
         <h3 className="text-lg font-semibold text-gray-700">Break time</h3>
-        <span className="text-slate-400 text-sm">0 Second</span>
+        <span className="text-blue-700 font-medium text-md mr-5">{breakTime} Second</span>
       </div>
 
-      <button className=" text-lg bg-blue-700 w-full py-3 rounded-lg text-white font-semibold">Activity Completed</button>
+      <button onClick={notify} className=" text-lg bg-blue-700 w-full py-3 rounded-lg text-white font-semibold">
+        Activity Completed
+      </button>
     </div>
   );
 };

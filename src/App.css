@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.logo{
+    width: 60px;
+}
+
+.icon{
+    width: 18px;
+}
