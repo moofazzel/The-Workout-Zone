@@ -17,13 +17,14 @@ const InfoSection = () => {
     localStorage.removeItem("durations");
     window.location.reload(false);
   };
+  
+  const storedBrkTime = localStorage.getItem("storedBreakTime");
 
   const handlerBreak = (e) => {
     const breakTime = e.target.innerText;
     localStorage.setItem("storedBreakTime", breakTime);
     const storedBrkTime = localStorage.getItem("storedBreakTime");
     setBrkTime(storedBrkTime);
-    // console.log(e.target.innerText);
   };
 
   // console.log(storedBrkTime);
@@ -121,7 +122,7 @@ const InfoSection = () => {
       <div className="flex justify-between bg-blue-50 px-6 py-4 rounded-lg my-6 mb-10">
         <h3 className="text-lg font-semibold text-gray-700">Break time</h3>
         <span className="text-blue-700 font-medium text-md mr-5">
-          {brkTime}
+          {storedBrkTime}
         </span>
       </div>
 
